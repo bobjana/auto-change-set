@@ -1,0 +1,26 @@
+{
+  "autoChangeSetApp": {
+    "changeSet": {
+      "home": {
+        "title": "Change Sets",
+        "createLabel": "Create a new Change Set",
+        "createOrEditLabel": "Create or edit a Change Set",
+        "notFound": "No Change Sets found"
+      },
+      "created": "A new Change Set is created with identifier {{ param }}",
+      "updated": "A Change Set is updated with identifier {{ param }}",
+      "deleted": "A Change Set is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Change Set {{ id }}?"
+      },
+      "detail": {
+        "title": "Change Set"
+      },
+      "title": "Title",
+      "summary": "Summary",
+      "released": "Released",
+      "date": "Date",
+      "change": "Change"
+    }
+  }
+}
