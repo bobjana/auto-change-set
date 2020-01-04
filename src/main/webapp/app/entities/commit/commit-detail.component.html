@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="commit">
+            <h2><span jhiTranslate="autoChangeSetApp.commit.detail.title">Commit</span> {{commit.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="autoChangeSetApp.commit.title">Title</span></dt>
+                <dd>
+                    <span>{{commit.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="autoChangeSetApp.commit.author">Author</span></dt>
+                <dd>
+                    <span>{{commit.author}}</span>
+                </dd>
+                <dt><span jhiTranslate="autoChangeSetApp.commit.date">Date</span></dt>
+                <dd>
+                    <span>{{commit.date}}</span>
+                </dd>
+                <dt><span jhiTranslate="autoChangeSetApp.commit.change">Change</span></dt>
+                <dd>
+                    <div *ngIf="commit.change">
+                        <a [routerLink]="['/change', commit.change?.id, 'view']">{{commit.change?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/commit', commit.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

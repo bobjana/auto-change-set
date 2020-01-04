@@ -1,0 +1,36 @@
+{
+    "name": "Commit",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "author",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "change",
+            "otherEntityRelationshipName": "commit",
+            "relationshipName": "change",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200104120801",
+    "entityTableName": "commit",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

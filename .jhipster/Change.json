@@ -1,0 +1,50 @@
+{
+    "name": "Change",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "summary",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hidden",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "authors",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "issueTrackingKey",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "commit",
+            "otherEntityRelationshipName": "change",
+            "relationshipName": "commit"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "changeSet",
+            "otherEntityRelationshipName": "change",
+            "relationshipName": "changeSet",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200104120800",
+    "entityTableName": "change",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
