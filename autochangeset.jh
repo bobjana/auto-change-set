@@ -1,0 +1,41 @@
+entity ChangeSet {
+	title String required
+    summary String
+    released Bool
+    date Date
+}
+
+entity Change {
+	title String
+    summary String
+    hidden Bool
+    authors String
+    issueTrackingKey String
+}
+
+entity Commit {
+	id String
+    title String
+    author String
+    date Date
+}
+
+relationship OneToMany {
+	ChangeSet{change} to Change
+}
+
+relationship OneToMany {
+	Change{commit} to Commit
+}
+
+// Set pagination options
+paginate Change with infinite-scroll
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
